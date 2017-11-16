@@ -5,3 +5,11 @@ RUN apt-get install -y python default-jre-headless python-tk python-pip python-d
 RUN pip install bzt
 RUN pip install --upgrade bzt
 
+ONBUILD COPY . /scripts
+
+ONBUILD WORKDIR /scripts
+
+
+CMD ["bzt" , "$TR_SCRIPT", "-report"]
+
+
