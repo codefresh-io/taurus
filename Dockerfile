@@ -10,6 +10,6 @@ ONBUILD COPY . /scripts
 ONBUILD WORKDIR /scripts
 
 
-CMD ["bzt" , "$TR_SCRIPT", "-report"]
+CMD ["bash " , "run.sh"]
 
 
