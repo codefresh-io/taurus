@@ -11,6 +11,6 @@ ONBUILD COPY . /scripts
 
 ONBUILD WORKDIR /scripts
 
-ONBUILD CMD ["bash","run.sh"]
+CMD ["bash","run.sh"]
 
 
