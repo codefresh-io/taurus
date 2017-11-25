@@ -5,11 +5,12 @@ RUN apt-get install -y python default-jre-headless python-tk python-pip python-d
 RUN pip install bzt
 RUN pip install --upgrade bzt
 
+COPY ./run.sh /scripts/run.sh
+
 ONBUILD COPY . /scripts
 
 ONBUILD WORKDIR /scripts
 
-
-CMD ["bash" , "run.sh"]
+ONBUILD CMD ["bash" , "run.sh"]
 
 
